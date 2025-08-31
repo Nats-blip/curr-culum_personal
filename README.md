@@ -1,0 +1,1 @@
+Curriculom perseonal
