@@ -1,1 +1,1 @@
-Curriculom perseonal
+Curriculom personal
