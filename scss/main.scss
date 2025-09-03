@@ -1,0 +1,179 @@
+// Imports modernos con @use
+
+@use 'colors';
+
+// Reset
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Base
+
+body.theme-modern {
+  font-family: 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at top left, colors.$color-bg-alt, colors.$color-bg-dark);
+  color: colors.$color-light;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-weight: normal;
+}
+
+// Header
+
+.header {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(135deg, colors.$color-bg-alt, #111);
+  border-bottom: 3px solid colors.$color-accent;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+
+  &__title {
+    font-size: 2.5rem;
+    margin-top: 1rem;
+    position: relative;
+    display: inline-block;
+
+    &::after {
+      content: "";
+      display: block;
+      height: 3px;
+      background: colors.$color-accent;
+      margin-top: 6px;
+      width: 0;
+      animation: underline 2s forwards;
+    }
+  }
+
+  &__subtitle {
+    font-size: 1.2rem;
+    color: colors.$color-secondary;
+    margin-bottom: 1rem;
+  }
+}
+
+.avatar {
+  display: inline-block;
+  padding: 5px;
+  border-radius: 50%;
+  background: conic-gradient(colors.$color-accent, colors.$color-secondary, colors.$color-accent);
+  animation: spin 6s linear infinite;
+
+  img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #111;
+  }
+}
+
+// Main Sections
+
+.main {
+  max-width: 1100px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.section {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  border-radius: 12px;
+  transform: translateY(50px);
+  opacity: 0;
+  animation: fadeUp 1.2s ease forwards;
+
+  &:nth-child(even) { background: colors.$color-bg-alt; }
+  &:nth-child(odd) { background: #1a1a1a; }
+
+  &__title {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: colors.$color-secondary;
+    border-left: 4px solid colors.$color-accent;
+    padding-left: 0.5rem;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+  }
+}
+
+// Cards
+
+.card {
+  background: colors.$color-bg-dark;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+  border-left: 4px solid colors.$color-accent;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.8);
+  }
+}
+
+// Contacto
+
+.section--contact a {
+  color: colors.$color-secondary;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: colors.$color-accent;
+  }
+}
+
+// Footer
+
+.footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #111, colors.$color-bg-alt);
+  color: #999;
+  clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 100%);
+}
+
+// Animaciones
+
+@keyframes underline { to { width: 100%; } }
+@keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+
+// Responsive
+
+@media (max-width: 600px) {
+  .header__title { font-size: 1.8rem; }
+  .header__subtitle { font-size: 1rem; }
+  .avatar img { width: 100px; height: 100px; }
+  .main { padding: 1rem; }
+  .section { padding: 1.2rem; }
+  .section__title { font-size: 1.3rem; }
+}
+
+@media (min-width: 601px) and (max-width: 992px) {
+  .header__title { font-size: 2rem; }
+  .header__subtitle { font-size: 1.1rem; }
+  .grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (min-width: 1200px) {
+  .header__title { font-size: 3rem; }
+  .header__subtitle { font-size: 1.4rem; }
+  .main { max-width: 1300px; }
+}
+
+// Grid
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
