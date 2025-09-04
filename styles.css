@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-body.theme-modern {
+body.moderno {
   font-family: "Segoe UI", sans-serif;
   background: radial-gradient(circle at top left, #1f2a36, #0d0d0d);
   color: #f5f5f5;
@@ -23,12 +23,14 @@ h1, h2, h3, h4 {
   border-bottom: 3px solid #d10000;
   clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
 }
+
 .header__title {
   font-size: 2.5rem;
   margin-top: 1rem;
   position: relative;
   display: inline-block;
 }
+
 .header__title::after {
   content: "";
   display: block;
@@ -38,6 +40,7 @@ h1, h2, h3, h4 {
   width: 0;
   animation: underline 2s forwards;
 }
+
 .header__subtitle {
   font-size: 1.2rem;
   color: #d4af37;
@@ -52,10 +55,12 @@ h1, h2, h3, h4 {
   animation: spin 6s linear infinite;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
+
 .avatar:hover {
   transform: scale(1.1) rotate(5deg);
   box-shadow: 0 0 20px rgba(209, 0, 0, 0.7);
 }
+
 .avatar img {
   width: 140px;
   height: 140px;
@@ -79,12 +84,15 @@ h1, h2, h3, h4 {
   animation: fadeUp 1.2s ease forwards;
   transition: transform 0.3s ease;
 }
+
 .section:nth-child(even) {
   background: #1f2a36;
 }
+
 .section:nth-child(odd) {
   background: #1a1a1a;
 }
+
 .section__title {
   font-size: 1.6rem;
   margin-bottom: 1rem;
@@ -94,6 +102,7 @@ h1, h2, h3, h4 {
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
   transition: color 0.3s ease;
 }
+
 .section__title:hover {
   color: #d10000;
 }
@@ -106,6 +115,7 @@ h1, h2, h3, h4 {
   border-left: 4px solid #d10000;
   transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
 }
+
 .card:hover {
   transform: translateY(-5px) rotateY(5deg);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.9);
@@ -118,6 +128,7 @@ h1, h2, h3, h4 {
   position: relative;
   transition: all 0.3s ease;
 }
+
 .section--contact a::after {
   content: "";
   position: absolute;
@@ -128,9 +139,11 @@ h1, h2, h3, h4 {
   background-color: #d10000;
   transition: width 0.3s ease;
 }
+
 .section--contact a:hover {
   color: #d10000;
 }
+
 .section--contact a:hover::after {
   width: 100%;
 }
