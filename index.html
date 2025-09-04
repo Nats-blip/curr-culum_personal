@@ -9,10 +9,11 @@
 <body class="moderno">
 
   <header class="header">
-    <div class="avatar" tabindex="0" aria-label="Avatar de Pablo">
-      <img src="avatar.png" alt="Avatar de Pablo">
+    <div class="avatar" tabindex="0" role="img" aria-labelledby="nombre-persona avatar-desc">
+      <img src="avatar.png" alt="Avatar de Pablo Andrés Bueno Ticona">
+      <span id="avatar-desc" class="visually-hidden">Avatar de Pablo Andrés Bueno Ticona</span>
     </div>
-    <h1 class="header__title">Pablo Andrés Bueno Ticona</h1>
+    <h1 id="nombre-persona" class="header__title">Pablo Andrés Bueno Ticona</h1>
     <h2 class="header__subtitle">Estudiante de Ingeniería de Sistemas</h2>
   </header>
 
@@ -33,7 +34,7 @@
       </div>
 
       <div>
-        <h3 id="section__title">Habilidades</h3>
+        <h3 id="habilidades-title" class="section__title">Habilidades</h3>
         <ul class="card">
           <li>Diseño gráfico</li>
           <li>Familia Adobe</li>
@@ -48,7 +49,7 @@
         <h4 id="proyecto1-title">Cableado estructurado para Colegio</h4>
         <p>Diseño e implementación de cableado estructurado para la sala de computación de la Unidad Educativa "Yunguyo".</p>
       </article>
-      <article  class="card" aria-labelledby="proyecto2-title">
+      <article class="card" aria-labelledby="proyecto2-title">
         <h4 id="proyecto2-title">Rebranding de marca "Cremitas"</h4>
         <p>Desarrollo de proyectos de branding: cambio de marca, elaboración de manual de identidad corporativa y diseño de piezas gráficas.</p>
       </article>
@@ -56,14 +57,13 @@
 
     <section class="section section--contact" aria-labelledby="contacto-title">
       <h3 id="contacto-title" class="section__title">Contacto</h3>
-      <p>Email: <a href="mailto:bueno1875@gmail.com">bueno1875@gmail.com</a></p>
-      <p>GitHub: <a href="https://github.com/Nats-blip" target="_blank" rel="noopener noreferrer">github.com/Pablo_Bueno</a></p>
+      <p>Email: <a href="mailto:bueno1875@gmail.com" aria-label="Enviar correo electrónico a bueno1875@gmail.com">bueno1875@gmail.com</a></p>
+      <p>GitHub: <a href="https://github.com/Nats-blip" target="_blank" rel="noopener noreferrer" aria-label="Visitar perfil de GitHub de Pablo Bueno (se abre en nueva ventana)">github.com/Pablo_Bueno</a></p>
     </section>
   </main>
 
   <footer class="footer">
     <p>© 2025 Pablo Andrés Bueno Ticona</p>
   </footer>
-
 </body>
 </html>
